@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Nativ</string>
+    <string name="post_image_description">Imagem do post</string>
+    <string name="profile_image_description">Foto de perfil</string>
+    <string name="label_username_placeholder">Username</string>
+    <string name="label_nome_completo_placeholder">Nome Completo</string>
+    <string name="action_adicionar_post">Adicionar Post</string>
+    <string name="action_carregar_feed">Carregar Feed</string>
+    <string name="action_adicionar">Adicionar</string>
+    <string name="action_cancelar">Cancelar</string>
+    <string name="action_selecionar_foto">Selecionar Foto</string>
+    <string name="action_sair">SAIR</string>
+    <string name="label_descricao_placeholder">Descricao</string>
+    <string name="hint_descricao_post">Descricao do post</string>
+    <string name="title_novo_post">Novo post</string>
+    <string name="msg_feed_erro">Nao foi possivel carregar o feed.</string>
+    <string name="msg_post_sucesso">Post adicionado com sucesso.</string>
+    <string name="msg_post_erro">Nao foi possivel adicionar o post.</string>
+    <string name="msg_post_foto_obrigatoria">Selecione uma foto para o post.</string>
+    <string name="msg_post_vazio">Escreva algo ou anexe uma foto para publicar.</string>
+    <string name="action_anexar_foto">📎 Anexar foto (opcional)</string>
+</resources>

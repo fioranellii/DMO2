@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/edtDescricaoPost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_descricao_post"
+            android:importantForAutofill="no"
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLines="5"
+            android:minLines="3" />
+
+        <TextView
+            android:id="@+id/txtCidadePost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="#888888"
+            android:textSize="12sp"
+            android:text="📍 Obtendo localização..."
+            android:visibility="gone" />
+
+        <Button
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:id="@+id/btnSelecionarFotoPost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/action_anexar_foto" />
+
+        <ImageView
+            android:id="@+id/imgNovoPost"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="12dp"
+            android:adjustViewBounds="true"
+            android:background="#F2F2F2"
+            android:contentDescription="@string/post_image_description"
+            android:padding="8dp"
+            android:scaleType="centerCrop"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
