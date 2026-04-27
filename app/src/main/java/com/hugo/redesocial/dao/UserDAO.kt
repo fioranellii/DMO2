@@ -1,7 +1,7 @@
 package com.hugo.redesocial.dao
 
 import com.google.firebase.firestore.FirebaseFirestore
-import com.luiz.nativ.model.User
+import com.hugo.redesocial.model.User
 
 class UserDAO {
     private val db = FirebaseFirestore.getInstance()

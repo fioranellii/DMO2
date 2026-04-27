@@ -3,83 +3,95 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp"
+    android:background="#F5F5F5"
     tools:context=".ui.MainActivity">
 
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginTop="40dp"
-        android:src="@drawable/logo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/lblEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="Email"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/logo" />
-
-    <EditText
-        android:id="@+id/edtEmail"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:hint="Digite seu email"
-        android:inputType="textEmailAddress"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/lblEmail" />
-
-    <TextView
-        android:id="@+id/lblPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Senha"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edtEmail" />
-
-    <EditText
-        android:id="@+id/edtPassword"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:hint="Digite sua senha"
-        android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/lblPassword" />
-
-    <Button
-        android:id="@+id/btnLogar"
+    <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Entrar"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edtPassword" />
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <Button
-        android:id="@+id/btnCadastrar"
-        style="?android:attr/borderlessButtonStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Não tem uma conta? Cadastre-se"
-        android:textAllCaps="false"
-        android:textColor="#3F51B5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnLogar" />
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/logo"
+            android:contentDescription="Logo"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bem-vindo"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#222"
+            android:layout_marginBottom="24dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:inputType="textEmailAddress"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:endIconMode="password_toggle"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Senha"
+                android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLogar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Entrar"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp"
+            app:cornerRadius="12dp"/>
+
+        <TextView
+            android:id="@+id/btnCadastrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Não tem conta? Cadastre-se"
+            android:textColor="#3F51B5"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:padding="8dp"/>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "176840331849",
+    "project_id": "socialnetwork-cb7d7",
+    "storage_bucket": "socialnetwork-cb7d7.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:176840331849:android:6da34cb817a67666b0a598",
+        "android_client_info": {
+          "package_name": "com.hugo.redesocial"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAf-D-gI1jWw3d9zHtNxs_RNlK-v22rmOo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:176840331849:android:83a85a572c2890ebb0a598",
+        "android_client_info": {
+          "package_name": "com.hugo.socialfire"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAf-D-gI1jWw3d9zHtNxs_RNlK-v22rmOo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

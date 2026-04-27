@@ -12,6 +12,9 @@ import com.hugo.redesocial.model.Post
 class PostAdapter(private var posts: MutableList<Post> = mutableListOf()) :
     RecyclerView.Adapter<PostAdapter.PostViewHolder>() {
 
+    // 🔥 ADICIONE ISSO
+    var onPostClick: ((Post) -> Unit)? = null
+
     class PostViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val imgAutorPerfil: ImageView = view.findViewById(R.id.imgAutorPerfil)
         val txtAutorUsername: TextView = view.findViewById(R.id.txtAutorUsername)
@@ -21,7 +24,8 @@ class PostAdapter(private var posts: MutableList<Post> = mutableListOf()) :
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.post_item, parent, false)
+        val view = LayoutInflater.from(parent.context)
+            .inflate(R.layout.post_item, parent, false)
         return PostViewHolder(view)
     }
 
@@ -29,6 +33,7 @@ class PostAdapter(private var posts: MutableList<Post> = mutableListOf()) :
         val post = posts[position]
 
         holder.txtAutorUsername.text = post.autorUsername.ifEmpty { post.autorEmail }
+
         if (post.autorFoto != null) {
             holder.imgAutorPerfil.setImageBitmap(post.autorFoto)
         } else {
@@ -50,6 +55,10 @@ class PostAdapter(private var posts: MutableList<Post> = mutableListOf()) :
         }
 
         holder.txtDescricao.text = post.descricao
+
+        holder.itemView.setOnClickListener {
+            onPostClick?.invoke(post)
+        }
     }
 
     override fun getItemCount(): Int = posts.size
