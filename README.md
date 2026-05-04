@@ -4,6 +4,7 @@ Aplicativo Android de rede social desenvolvido em Kotlin, com suporte a posts co
 
 ---
 [![Assistir demo](https://img.youtube.com/vi/u8oJtFLwYJs/0.jpg)](https://www.youtube.com/shorts/u8oJtFLwYJs)
+
 [![Código](https://www.youtube.com/watch?v=2nnwUaGxkYc)](https://www.youtube.com/watch?v=2nnwUaGxkYc)
 
 ## 📋 Funcionalidades
